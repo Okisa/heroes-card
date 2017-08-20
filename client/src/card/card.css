@@ -13,32 +13,34 @@
 
 .container__card-page{
     display: flex;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 .container__quiz{
-    background-color: lightblue;
+    background-color: lightgreen;
     width: 50%;
-    height: 45rem;
-    justify-content:space-between;
-    overflow: scroll;
-    
-
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    overflow: none;
 }
 
-.container__card{
-    background-color: lightskyblue;
-    width: 50%;
-    height: 45rem;
+.container__quiz:last-child {
+    align-items: flex-end;
 }
 
 .button__div{
-    width: 10rem;
-    margin-left: 40%;
-    margin-top: -8rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .container__card{
     display: flex;
     padding: 0 10rem 0 15rem;
+    justify-content: center;
     align-items: center;
 }
