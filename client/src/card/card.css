@@ -72,13 +72,12 @@
     z-index: 999;
     margin-bottom: 40rem;
     height: 10rem;
-    
 }
 .YourHero{
     position: absolute;
-    margin-top: 10rem;
-    margin-left: 9.7rem;
-    z-index: 999;
+    top: 79.5vh;
+    right: 24vw;
+    z-index: 9999;
 }
 .HeroName{
     margin-bottom: 2rem;
