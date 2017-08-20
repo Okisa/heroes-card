@@ -9,10 +9,12 @@ import './card.css';
 import axios from 'axios';
 import YourCard from '../images/template_card.jpg';
 import {Link} from 'react-router';
+import ImagesUploader from 'react-images-uploader';
 
 let value;
 let fullAnswer=" ";
 let fname="";
+let fphoto="";
 
 class Card extends Component {
 
@@ -29,7 +31,8 @@ class Card extends Component {
             status4:'',
             status5:'',
             hero:'',
-            name:''
+            name:'',
+            photo:''
         };
 
         this.incrementIndex = this.incrementIndex.bind(this);
@@ -44,7 +47,8 @@ class Card extends Component {
             console.log(this.fullAnswer);
         if(this.state.quizIndex==0){
             console.log(fname);
-            this.setState({name:fname});
+            this.setState({name:fname, photo:fphoto});
+
         }
         if(this.state.quizIndex<6)
         {
@@ -80,6 +84,9 @@ class Card extends Component {
     saveName(event){
         fname=event.target.value;
     }
+    savePhoto(event){
+        fphoto=event.target.value;
+    }
 
 
     render(){
@@ -94,6 +101,9 @@ class Card extends Component {
                                     <div>
                                         <p className="InitialName">Digite o seu nome!</p>
                                         <input className="HeroName" type="text" value={this.getName} onChange={this.saveName}/>
+                                        <p className="InitialName">Coloque sua imagem!</p>
+                                        <input className="HeroName" type="text" value={this.getName} onChange={this.savePhoto}/>
+                                        
                                     </div>:
                                     this.state.index>6?
                                     <div>
@@ -109,6 +119,7 @@ class Card extends Component {
                         <div className="container__card">
                             <div className="Status">
                                 <label className="PlayerName">{this.state.name}</label>
+                                <div className="CardPhoto"><img className="CardProfile_right" src={this.state.photo} alt=""/></div>
                                 <div className="StatusPlayer">
                                     <label className="StatusOne">{this.state.status1}</label>
                                     <label className="StatusTwo">{this.state.status2}</label>
@@ -117,6 +128,7 @@ class Card extends Component {
                                     <label className="StatusFive">{this.state.status5}</label>
                                 </div>
                                 <label className="YourHero">{this.state.hero}</label>
+                                
                             </div>
                             <img className="YourCard_right" src={YourCard} alt=""/>
                         </div>
