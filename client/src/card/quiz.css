@@ -1,0 +1,10 @@
+.quiz__form{
+    height: auto;
+    background-color:white;
+    border-radius: 10px;
+}
+
+.form__list{
+    list-style-type: none;
+    font-size: 1rem;
+}
