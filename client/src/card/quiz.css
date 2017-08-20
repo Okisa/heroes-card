@@ -1,6 +1,7 @@
 .quiz__form{
     height: auto;
-    background-color:lightgreen;
+    background-color:white;
+    border-radius: 10px;
 }
 
 .form__list{

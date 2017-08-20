@@ -41,7 +41,7 @@ class HomeContainer extends Component{
                                                     <header className="align-center">
                                                     
                                                     <p> Chame seus amigos para jogar esse jogo de sobrevivência interativo, o seu card game irá evoluir de acordo com as decisões tomadas, e o mais forte sobreviverá!</p>
-                                                    <h2>Jogar!</h2>
+                                                    <h2>Em Breve!</h2>
                                                     </header>
                                                 </div>
                                             </div>

@@ -19,7 +19,8 @@
     min-height: 100vh;
 }
 .container__quiz{
-    background-color: lightgreen;
+    background-image: url('../images/Imagem-Quiz.jpg');
+    background-size: 100% 100%;
     width: 50%;
     min-height: 100vh;
     display: flex;
@@ -29,9 +30,11 @@
     overflow: none;
 }
 
-
+.HomeLink{
+    margin-left: 3rem;
+}
 .container__card{
-    background-color: lightskyblue;
+    background-color: white;
     overflow: hidden;
     width: 50%;
     height: 45rem;
@@ -76,6 +79,9 @@
     margin-left: 9.7rem;
     z-index: 999;
 }
+.HeroName{
+    margin-bottom: 2rem;
+}
 .PlayerName{
     margin-left: 9.5rem;
     margin-top: 1.5rem;
@@ -115,4 +121,15 @@
     
     z-index: 999;
     
+}
+
+.FinalTitle{
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+}
+.InitialName{
+    color: black;
+    border-radius: 10px;
+    background-color: white;
 }

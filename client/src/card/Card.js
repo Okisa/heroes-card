@@ -8,9 +8,12 @@ import CardView from '../cardView/CardView';
 import './card.css';
 import axios from 'axios';
 import YourCard from '../images/template_card.jpg';
+import {Link} from 'react-router';
 
 let value;
 let fullAnswer=" ";
+let fname="";
+
 class Card extends Component {
 
     constructor(props){
@@ -35,15 +38,20 @@ class Card extends Component {
     componentWillMount(){
        
     }
-    incrementIndex(){
+    incrementIndex(event){
             console.log(this.state.quizIndex);
             this.fullAnswer = `${this.fullAnswer} ${this.value}`;
             console.log(this.fullAnswer);
-        if(this.state.quizIndex<4)
+        if(this.state.quizIndex==0){
+            console.log(fname);
+            this.setState({name:fname});
+        }
+        if(this.state.quizIndex<6)
         {
             this.setState({quizIndex:++this.state.quizIndex});
         }
         else{
+            alert("Aguarde! Watson está medindo suas forças!");
             axios.get(`https://bluehack-heroes.mybluemix.net/api/heroes?name=Volverine&text=${this.fullAnswer}`)
                 .then(response => {
                     localStorage.setItem('answer',response);
@@ -53,7 +61,7 @@ class Card extends Component {
                         status3:Math.round(response.data[2].value),
                         status4:Math.round(response.data[3].value),
                         status5:Math.round(response.data[4].value),
-                        hero:response.data[5].name
+                        hero:response.data[6].heroi
                     });
                     console.log(response);
                 })
@@ -68,21 +76,39 @@ class Card extends Component {
         console.log(value);
         this.value=value;
     }
+
+    saveName(event){
+        fname=event.target.value;
+    }
+
+
     render(){
-        let quiz = quizList[this.state.quizIndex];
+        let quiz = quizList[this.state.quizIndex-1];
         return(
             <div className="container">
-                <div className="container__header"></div>
+                <div className="container__header"> <Link className="HomeLink" to='/'>Watson Super Hero</Link></div>
                 <div className="container__card-page">
                         <div className="container__quiz">
-                            <Quiz List={quiz} updateAnswer={this.getAnswer.bind(this)}/>
+                            {
+                                this.state.index++==0? 
+                                    <div>
+                                        <p className="InitialName">Digite o seu nome!</p>
+                                        <input className="HeroName" type="text" value={this.getName} onChange={this.saveName}/>
+                                    </div>:
+                                    this.state.index>6?
+                                    <div>
+                                        <h1 className="FinalTitle">Apenas clique no botão abaixo e pronto, sua carta novinha! --></h1>
+                                    </div>
+                                
+                                :<Quiz List={quiz} updateAnswer={this.getAnswer.bind(this)}/>
+                            }
                             <div className="button__div">
-                                <button onClick={this.incrementIndex}>Criar Carta!</button>
+                                <button onClick={this.incrementIndex}>{this.state.quizIndex<6?"Next": "Criar Carta!"}</button>
                             </div>
                         </div>
                         <div className="container__card">
                             <div className="Status">
-                                <label className="PlayerName">Teste</label>
+                                <label className="PlayerName">{this.state.name}</label>
                                 <div className="StatusPlayer">
                                     <label className="StatusOne">{this.state.status1}</label>
                                     <label className="StatusTwo">{this.state.status2}</label>
