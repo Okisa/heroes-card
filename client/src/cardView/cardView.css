@@ -1,0 +1,8 @@
+.Cardview{
+    justify-content: center;
+    width: 20rem;
+    height: 30rem;
+    margin-top: 5rem;
+    border-radius: 10px;
+    background-color: yellow;
+}

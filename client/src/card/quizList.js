@@ -61,4 +61,5 @@ const quizList = [
 
 ];
 
+
 export default quizList;

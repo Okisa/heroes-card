@@ -16,7 +16,9 @@ const store = configureStore();
 
 
 ReactDOM.render(
-<Router history={browserHistory} routes={routes}/>
+
+    <Router history={browserHistory} routes={routes}/>
+
 , document.getElementById('root')
 
 );
