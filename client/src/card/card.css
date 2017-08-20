@@ -2,6 +2,7 @@
 .container{
     
     width: auto;
+    overflow: hidden;
     
 }
 .container__header{
@@ -27,6 +28,7 @@
 
 .container__card{
     background-color: lightskyblue;
+    overflow: hidden;
     width: 50%;
     height: 45rem;
 }
@@ -39,6 +41,70 @@
 
 .container__card{
     display: flex;
-    padding: 0 10rem 0 15rem;
+    padding: 0 10rem 0 12rem;
     align-items: center;
+}
+
+.YourCard_right{
+    height: 30rem;
+    widows: 15rem;
+    border-radius: 10px;
+    position: fixed;
+}
+.Status{
+    width: 5rem;
+    height: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.StatusPlayer{
+    z-index: 999;
+    margin-bottom: 16rem;
+    height: 10rem;
+    
+}
+.YourHero{
+    margin-top:-1.9rem;
+    margin-left: 9.7rem;
+    z-index: 999;
+}
+.PlayerName{
+    margin-left: 9.5rem;
+    margin-top: 1.5rem;
+    z-index: 999;
+    
+}
+.StatusOne{
+    margin-left: 15rem;
+    margin-top: 13.8rem;
+    margin-bottom: 0;
+    z-index: 999;
+    
+}
+.StatusTwo{
+    margin-left: 15rem;   
+    margin-bottom: 0;
+    
+    z-index: 999;
+    
+}
+.StatusThree{
+    margin-left: 15rem;    
+    margin-bottom: 0;
+    
+    z-index: 999;
+    
+}
+.StatusFour{
+    margin-left: 15rem;   
+    margin-bottom: 0;
+    z-index: 999;
+    
+}
+.StatusFive{
+    margin-left: 15rem;
+    margin-bottom: 0;
+    
+    z-index: 999;
+    
 }
