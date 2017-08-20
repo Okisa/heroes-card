@@ -56,7 +56,7 @@ class Card extends Component {
         }
         else{
             alert("Aguarde! Watson está medindo suas forças!");
-            axios.get(`https://bluehack-heroes.mybluemix.net/api/heroes?name=Volverine&text=${this.fullAnswer}`)
+            axios.get(`https://bluehack-heroes.mybluemix.net/api/heroes?name=${this.state.name}&text=${this.fullAnswer}`)
                 .then(response => {
                     localStorage.setItem('answer',response);
                     this.setState({
