@@ -5,6 +5,7 @@ import * as actions from './actions';
 import { connect } from 'react-redux';
 import CardView from '../cardView/CardView';
 import './card.css';
+import axios from 'axios';
 
 let value;
 let fullAnswer=" ";
@@ -34,7 +35,13 @@ class Card extends Component {
             this.setState({quizIndex:++this.state.quizIndex});
         }
         else{
-            
+            axios.get(`https://bluehack-heroes.mybluemix.net/api/heroes?name=Volverine&text=${this.fullAnswer}`)
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(error => {
+                    console.log(error);
+                });
         }
     }
 

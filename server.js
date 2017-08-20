@@ -2,6 +2,7 @@ var express = require("express");
 var app = express();
 var cfenv = require("cfenv");
 var bodyParser = require('body-parser')
+const axios = require('axios')
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -17,6 +18,27 @@ var mydb;
 * 	"name": "Bob"
 * }
 */
+
+app.post('/api/heroes', (req, res) => {
+
+  let dados = req.body
+
+  axios.post('https://bluehack-heroes.mybluemix.net/api/heroes?name=Volverine&text=', {
+                
+      headers: {
+          'Content-type': 'application/json'
+      },
+      method: 'post',
+      body: JSON.stringify(dados)
+  })
+      .then(response => {
+          console.log(response);
+      })
+      .catch(error => {
+          console.log(error);
+      });
+})
+
 app.post("/api/visitors", function (request, response) {
   var userName = request.body.name;
   if(!mydb) {
