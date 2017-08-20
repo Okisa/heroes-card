@@ -1,0 +1,38 @@
+
+.container{
+    
+    width: auto;
+    
+}
+.container__header{
+    width: 100%;
+    height: 4rem;
+    background-color: black;
+    position: fixed;
+}
+
+.container__card-page{
+    display: flex;
+    align-items: center;
+}
+.container__quiz{
+    background-color: lightblue;
+    width: 50%;
+    height: 45rem;
+    justify-content:space-between;
+    overflow: scroll;
+    
+
+}
+
+.container__card{
+    background-color: lightskyblue;
+    width: 50%;
+    height: 45rem;
+}
+
+.button__div{
+    width: 10rem;
+    margin-left: 40%;
+    margin-top: -8rem;
+}

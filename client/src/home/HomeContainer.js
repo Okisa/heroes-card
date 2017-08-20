@@ -2,8 +2,11 @@ import React, {Component} from 'react';
 import './style/main.css';
 import './style/HomeContainer.css';
 import marvelimg1 from  '../images/Marvelslide1.jpg';
+import {Link} from 'react-router';
 
 class HomeContainer extends Component{
+
+   
 
         render(){
             return(
@@ -15,7 +18,6 @@ class HomeContainer extends Component{
                                 <h2 className="title__title">Vamos começar?</h2>
                             </header>
                         </div>
-
                 </section>                      
                                 <section id="one" className="wrapper style2">
                                 <div className="inner">
@@ -31,7 +33,7 @@ class HomeContainer extends Component{
                                                     
                                                     </header>
                                                     <p> Que tal criar uma carta de jogo de acordo com sua personalidade? Utilizando o Watson da IBM, conseguimos definir sua personalidade para dentro de uma carta de jogo, e você poderá usar você mesmo para enfrentar seus amigos, com um deck personalizado.</p>
-                                                        <h2>Gerar seu card game!</h2>
+                                                        <Link className="link__card" to="/card"><h2 >Gerar seu card game!</h2></Link>
                                                 </div>
                                             </div>
                                         </div>

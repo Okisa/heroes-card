@@ -30,3 +30,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.link__card{
+    font-style: normal;
+}
