@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './style/main.css';
 import './style/HomeContainer.css';
-import marvelimg1 from  '../images/Marvelslide1.jpg';
+import marvelimg1 from  '../images/Marvel-Home.jpg';
 import {Link} from 'react-router';
 
 class HomeContainer extends Component{
@@ -14,9 +14,6 @@ class HomeContainer extends Component{
                     <section className="banner full">
 
                         <div className="inner">
-                            <header>
-                                <h2 className="title__title">Vamos começar?</h2>
-                            </header>
                         </div>
                 </section>                      
                                 <section id="one" className="wrapper style2">
@@ -25,29 +22,27 @@ class HomeContainer extends Component{
                 
                                         <div>
                                             <div className="box">
-                                                <div className="image fit">
-                                                    {/* <img src="images/pic02.jpg" alt="" /> */}
-                                                </div>
+                                                
                                                 <div className="content">
                                                     <header className="align-center">
                                                     
-                                                    </header>
-                                                    <p> Que tal criar uma carta de jogo de acordo com sua personalidade? Utilizando o Watson da IBM, conseguimos definir sua personalidade para dentro de uma carta de jogo, e você poderá usar você mesmo para enfrentar seus amigos, com um deck personalizado.</p>
+                                                    
+                                                    <p> Que tal criar uma carta de jogo de acordo com sua personalidade? Utilizando o Watson da IBM, conseguimos definir sua personalidade para dentro de uma carta de jogo, e você poderá usar essa carta para comparar com amigos que você encontrará pelo evento.</p>
                                                         <Link className="link__card" to="/card"><h2 >Gerar seu card game!</h2></Link>
+                                                        </header>
                                                 </div>
                                             </div>
                                         </div>
                 
                                         <div>
                                             <div className="box">
-                                                <div className="image fit">
-                                                    {/* <img src="images/pic03.jpg" alt="" /> */}
-                                                </div>
+                                                
                                                 <div className="content">
                                                     <header className="align-center">
-                                                    </header>
+                                                    
                                                     <p> Chame seus amigos para jogar esse jogo de sobrevivência interativo, o seu card game irá evoluir de acordo com as decisões tomadas, e o mais forte sobreviverá!</p>
                                                     <h2>Jogar!</h2>
+                                                    </header>
                                                 </div>
                                             </div>
                                         </div>
