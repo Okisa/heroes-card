@@ -35,6 +35,9 @@
     overflow: hidden;
     width: 50%;
     height: 45rem;
+}
+.container__quiz:last-child {
+    align-items: flex-end;
 
 }
 
@@ -46,12 +49,9 @@
 
 .container__card{
     display: flex;
-<<<<<<< HEAD
+
     padding: 0 10rem 0 12rem;
-=======
-    padding: 0 10rem 0 15rem;
-    justify-content: center;
->>>>>>> 7625997ec84853b0cacdb70a124ec533180754e7
+
     align-items: center;
 }
 

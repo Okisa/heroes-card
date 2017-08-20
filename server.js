@@ -39,6 +39,7 @@ app.post('/api/heroes', (req, res) => {
       });
 })
 
+
 app.post("/api/visitors", function (request, response) {
   var userName = request.body.name;
   if(!mydb) {
